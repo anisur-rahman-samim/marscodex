@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const TopbarInfo = () => {
   return (
-    <div className="bg-primary-blue  py-3">
+    <div className="bg-primary-blue  py-5">
       <Container className="flex-between">
         <div className="flex gap-x-5">
           <div className="flex  gap-x-1">
@@ -21,11 +21,23 @@ const TopbarInfo = () => {
           </div>
           <div className="flex gap-x-1">
             <Phone color="#FFFDFC" />
-            <p className="text-primary-white"> +8801332371530</p>
+            <Link
+              href={"tel: (+880)1332371530"}
+              className="text-primary-white hover:text-primary-light-blue"
+            >
+              {" "}
+              +8801332371530
+            </Link>
           </div>
           <div className="flex gap-x-1">
             <Mail color="#FFFDFC" />
-            <p className="text-primary-white"> support@marscodex.com</p>
+            <Link
+              href={"mailto:support@marscodex.com"}
+              className="text-primary-white hover:text-primary-light-blue"
+            >
+              {" "}
+              support@marscodex.com
+            </Link>
           </div>
         </div>
         <div className="flex gap-x-2">
