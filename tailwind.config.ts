@@ -52,7 +52,7 @@ export default {
           "5": "hsl(var(--chart-5))",
         },
         "primary-blue": "#684DF4",
-        "primary-white": "##FFFDFC",
+        "primary-white": "#FFFDFC",
       },
       borderRadius: {
         lg: "var(--radius)",
