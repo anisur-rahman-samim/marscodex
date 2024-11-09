@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 import "./globals.css";
+import TopbarInfo from "@/modules/home/TopbarInfo";
+import Navbar from "@/components/shared/Navbar/Navabr";
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -22,7 +24,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${barlow.className} antialiased`}>{children}</body>
+      <body className={`${barlow.className} antialiased`}>
+        <header>
+          <TopbarInfo></TopbarInfo>
+          <nav className="sticky left-0 top-0 z-10 w-full">
+            <Navbar></Navbar>
+          </nav>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
