@@ -9,6 +9,7 @@ import { X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Navlink from "./component/NavLink";
 import { cn } from "@/lib/utils";
+import Container from "@/components/shared/Container";
 
 /**
  * Wishlist - Available to only buyer type user
@@ -83,10 +84,10 @@ export default function Navbar() {
           squeezeOnScroll ? "px-6 py-3 shadow" : "px-0 py-5"
         )}
       >
-        <div className="mx-auto items-center justify-between lg:flex lg:w-[85%] lg:gap-x-10 2xl:w-[75%]">
+        <Container className=" items-center justify-between lg:flex lg:gap-x-10 2xl:w-[75%]">
           {/* Logo -- left */}
-          <Link href="/" className="w-[130px]">
-            <Image src={logo} alt="logo" className="w-full" />
+          <Link href="/" >
+            <Image src={logo} alt="logo" className=" w-[150px]" />
           </Link>
 
           {/* Links & Icons -- right */}
@@ -108,7 +109,7 @@ export default function Navbar() {
               Products
             </Navlink>
           </div>
-        </div>
+        </Container>
       </div>
 
       {/* ------------ Mobile Version -------------- */}
