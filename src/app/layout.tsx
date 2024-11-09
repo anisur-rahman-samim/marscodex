@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Barlow } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
+const barlow = Barlow({
   subsets: ["latin"],
   weight: ["400", "600", "700", "800"],
-  variable: "--font-poppins",
+  variable: "--font-barlow",
   display: "swap",
 });
 
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased`}>{children}</body>
+      <body className={`${barlow.className} antialiased`}>{children}</body>
     </html>
   );
 }
