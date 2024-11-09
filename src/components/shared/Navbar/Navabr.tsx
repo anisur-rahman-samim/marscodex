@@ -84,15 +84,15 @@ export default function Navbar() {
           squeezeOnScroll ? "px-6 py-3 shadow" : "px-0 py-5"
         )}
       >
-        <Container className=" items-center justify-between lg:flex lg:gap-x-10 2xl:w-[75%]">
+        <Container className=" items-center justify-between lg:flex lg:gap-x-10 ">
           {/* Logo -- left */}
-          <Link href="/" >
-            <Image src={logo} alt="logo" className=" w-[150px]" />
+          <Link href="/">
+            <Image src={logo} alt="logo" className=" w-[180px]" />
           </Link>
 
           {/* Links & Icons -- right */}
           <div className="flex flex-grow items-center justify-end text-center lg:gap-x-8 xl:gap-x-10 2xl:gap-x-12">
-            <Navlink route="/home" setHideMobileMenu={setHideMobileMenu}>
+            <Navlink route="/" setHideMobileMenu={setHideMobileMenu}>
               Home
             </Navlink>
             <Navlink route="/contact" setHideMobileMenu={setHideMobileMenu}>
@@ -102,11 +102,14 @@ export default function Navbar() {
               About Us
             </Navlink>
 
-            <Navlink
-              route="/all-products"
-              setHideMobileMenu={setHideMobileMenu}
-            >
-              Products
+            <Navlink route="/service" setHideMobileMenu={setHideMobileMenu}>
+              Services
+            </Navlink>
+            <Navlink route="/whyChoiceUs" setHideMobileMenu={setHideMobileMenu}>
+              Why Choice Us
+            </Navlink>
+            <Navlink route="/team" setHideMobileMenu={setHideMobileMenu}>
+              Team
             </Navlink>
           </div>
         </Container>
