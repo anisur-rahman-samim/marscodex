@@ -24,7 +24,7 @@ export default function Navlink({
     <Link
       href={route}
       passHref
-      className={`navbar-link font-medium text-lg uppercase ${
+      className={`navbar-link font-medium uppercase truncate ${
         pathname === route ? "text-primary-blue" : "text-black"
       }`}
       onClick={hideMobileMenu}

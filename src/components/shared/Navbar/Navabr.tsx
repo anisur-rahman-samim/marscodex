@@ -10,6 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Navlink from "./component/NavLink";
 import { cn } from "@/lib/utils";
 import Container from "@/components/shared/Container";
+import HoverEffectButton from "@/components/ui/hoverEffectButton";
 
 /**
  * Wishlist - Available to only buyer type user
@@ -83,7 +84,7 @@ export default function Navbar() {
           squeezeOnScroll ? "px-6 py-2 shadow" : "px-0 py-4"
         )}
       >
-        <Container className=" items-center justify-between lg:flex lg:gap-x-10 ">
+        <Container className=" flex items-center justify-between lg:gap-x-10 ">
           {/* Logo -- left */}
           <Link href="/">
             <Image src={logo} alt="logo" className=" w-[180px]" />
@@ -111,6 +112,13 @@ export default function Navbar() {
               Team
             </Navlink>
           </div>
+
+          {/* contact button */}
+          <div>
+            <HoverEffectButton className="bg-primary-blue py-2 text-base font-medium truncate pt-1 px-6">
+              <Link href="#">Contact Us</Link>
+            </HoverEffectButton>
+          </div>
         </Container>
       </div>
 
@@ -129,9 +137,9 @@ export default function Navbar() {
             onClick={() => setHideMobileMenu(!hideMobileMenu)}
           >
             {hideMobileMenu ? (
-              <Menu color="#684DF4" size={24} />
+              <Menu color="#FE6201" size={24} />
             ) : (
-              <X color="#684DF4" size={24} />
+              <X color="#FE6201" size={24} />
             )}
           </button>
 
@@ -157,7 +165,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Links */}
-        <div className="absolute left-0 top-[70px] z-[9999] h-auto w-full">
+        <div className="absolute left-0 top-[60px] z-[9999] h-auto w-full">
           <AnimatePresence>
             {!hideMobileMenu && (
               <motion.div
