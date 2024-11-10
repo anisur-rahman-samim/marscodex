@@ -12,15 +12,15 @@ import Link from "next/link";
 
 const TopbarInfo = () => {
   return (
-    <div className="bg-primary-blue  py-5">
+    <div className="bg-primary-blue  py-3">
       <Container className="flex-between">
         <div className="flex gap-x-5">
-          <div className="flex  gap-x-1">
-            <MapPin color="#FFFDFC" />
+          <div className="flex items-center  gap-x-1">
+            <MapPin color="#FFFDFC" size={20} />
             <p className="text-primary-white">Road No. 6, Mirpur 10, 1216</p>
           </div>
-          <div className="flex gap-x-1">
-            <Phone color="#FFFDFC" />
+          <div className="flex items-center gap-x-1">
+            <Phone color="#FFFDFC" size={20} />
             <Link
               href={"tel: (+880)1332371530"}
               className="text-primary-white hover:text-primary-light-blue"
@@ -29,8 +29,8 @@ const TopbarInfo = () => {
               +8801332371530
             </Link>
           </div>
-          <div className="flex gap-x-1">
-            <Mail color="#FFFDFC" />
+          <div className="flex items-center gap-x-1">
+            <Mail color="#FFFDFC" size={20} />
             <Link
               href={"mailto:support@marscodex.com"}
               className="text-primary-white hover:text-primary-light-blue"
@@ -40,19 +40,19 @@ const TopbarInfo = () => {
             </Link>
           </div>
         </div>
-        <div className="flex gap-x-2">
+        <div className="flex items-center gap-x-2">
           <p className="text-primary-white">Follow Us On :</p>
           <Link href={"https://www.facebook.com/marscodex"} target="_blank">
-            <Facebook color="#FFFDFC" />
+            <Facebook size={20} color="#FFFDFC" />
           </Link>
           <Link href={"https://www.facebook.com/marscodex"} target="_blank">
-            <Linkedin color="#FFFDFC" />
+            <Linkedin size={20} color="#FFFDFC" />
           </Link>
           <Link href={"https://www.facebook.com/marscodex"} target="_blank">
-            <Instagram color="#FFFDFC" />
+            <Instagram size={20} color="#FFFDFC" />
           </Link>
           <Link href={"https://www.facebook.com/marscodex"} target="_blank">
-            <Youtube color="#FFFDFC" />
+            <Youtube size={20} color="#FFFDFC" />
           </Link>
         </div>
       </Container>

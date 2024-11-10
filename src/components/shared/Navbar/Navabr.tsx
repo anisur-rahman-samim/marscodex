@@ -56,7 +56,6 @@ const smallMenuVariants = {
 
 export default function Navbar() {
   const [hideMobileMenu, setHideMobileMenu] = useState(true);
-  const [hideMobileSearchBar, setHideMobileSearchBar] = useState(true);
   const [squeezeOnScroll, setSqueezeOnScroll] = useState(false);
 
   // Squeeze navbar on scroll
@@ -76,12 +75,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="relative z-[9999] w-full bg-white">
+    <nav className="relative z-[9999] w-full bg-[#E1EAFF]">
       {/* ------------ Desktop Version ------------- */}
       <div
         className={cn(
           "hidden w-full border-b border-b-gray-300 transition-all duration-300 ease-in-out lg:block",
-          squeezeOnScroll ? "px-6 py-3 shadow" : "px-0 py-5"
+          squeezeOnScroll ? "px-6 py-2 shadow" : "px-0 py-4"
         )}
       >
         <Container className=" items-center justify-between lg:flex lg:gap-x-10 ">
@@ -91,7 +90,7 @@ export default function Navbar() {
           </Link>
 
           {/* Links & Icons -- right */}
-          <div className="flex flex-grow items-center justify-end text-center lg:gap-x-8 xl:gap-x-10 2xl:gap-x-12">
+          <div className="flex flex-grow items-center justify-end text-center lg:gap-x-8 xl:gap-x-6 2xl:gap-x-8">
             <Navlink route="/" setHideMobileMenu={setHideMobileMenu}>
               Home
             </Navlink>
@@ -130,9 +129,9 @@ export default function Navbar() {
             onClick={() => setHideMobileMenu(!hideMobileMenu)}
           >
             {hideMobileMenu ? (
-              <Menu color="#FE6201" size={24} />
+              <Menu color="#684DF4" size={24} />
             ) : (
-              <X color="#FE6201" size={24} />
+              <X color="#684DF4" size={24} />
             )}
           </button>
 
@@ -158,7 +157,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Links */}
-        <div className="absolute left-0 top-[60px] z-[9999] h-auto w-full">
+        <div className="absolute left-0 top-[70px] z-[9999] h-auto w-full">
           <AnimatePresence>
             {!hideMobileMenu && (
               <motion.div
