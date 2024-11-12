@@ -6,6 +6,7 @@ import { ArrowRight, Play } from "lucide-react";
 import AnimatedButton from "@/components/ui/animatedButton";
 import PulseShadow from "@/components/ui/PulseShadow";
 import lineImage from "@/assets/hero-shape2.png";
+import InfiniteMovement from "@/components/animation/InfiniteMovement";
 
 const HeroSection = () => {
   return (
@@ -51,12 +52,14 @@ const HeroSection = () => {
           <Image src={heroImage} alt="hero_image"></Image>
         </div>
         <div className="absolute top-0 lg:left-20">
-          <Image
-            src={lineImage}
-            alt="line_image"
-            width={500}
-            className="opacity-5 xl:w-[1000px]"
-          ></Image>
+          <InfiniteMovement duration={20} y="-30px">
+            <Image
+              src={lineImage}
+              alt="line_image"
+              width={500}
+              className="opacity-5 xl:w-[1000px]"
+            ></Image>
+          </InfiniteMovement>
         </div>
       </Container>
     </AnimatedBg>
