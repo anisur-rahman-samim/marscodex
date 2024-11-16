@@ -1,18 +1,19 @@
 import AnimatedBg from "@/components/animation/AnimatedBg";
 import Container from "@/components/shared/Container";
-import heroImage from "@/assets/hero_img_1_1.png";
+import heroImage from "@/assets/hero/hero_img.png";
 import Image from "next/image";
 import { ArrowRight, Play } from "lucide-react";
 import AnimatedButton from "@/components/ui/animatedButton";
 import PulseShadow from "@/components/ui/PulseShadow";
 import lineImage from "@/assets/hero-shape2.png";
-import InfiniteMovement from "@/components/animation/InfiniteMovement";
+import MovementElement from "@/components/animation/MovementElement";
+import PlayButton from "@/components/client-components/PlayButton";
 
 const HeroSection = () => {
   return (
     <AnimatedBg>
       <Container className="min-h-[calc(100vh-24px)] pt-5 flex-between lg:gap-x-10 relative">
-        <div className="flex-1 space-y-5">
+        <div className="flex-1 space-y-5 z-20">
           <h4 className="text-2xl font-semibold uppercase text-primary-blue">
             Solution For Your Business
           </h4>
@@ -36,11 +37,7 @@ const HeroSection = () => {
               </div>
             </AnimatedButton>
             <div className="flex items-center gap-x-3 cursor-pointer">
-              <PulseShadow>
-                <div className="bg-primary-blue p-2 rounded-full hover:animate-pulse ">
-                  <Play color="#fff" fill="#fff" />
-                </div>
-              </PulseShadow>
+              <PlayButton></PlayButton>
               <div>
                 <h5 className="font-semibold">Discover Our Story</h5>
                 <p className="text-primary-gray">Subscribe Now</p>
@@ -48,18 +45,18 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1">
-          <Image src={heroImage} alt="hero_image"></Image>
+        <div className="flex-1 z-20">
+          <MovementElement duration={0.8}>
+            <Image src={heroImage} alt="hero_image"></Image>
+          </MovementElement>
         </div>
-        <div className="absolute top-0 lg:left-20">
-          <InfiniteMovement duration={20} y="-30px">
-            <Image
-              src={lineImage}
-              alt="line_image"
-              width={500}
-              className="opacity-5 xl:w-[1000px]"
-            ></Image>
-          </InfiniteMovement>
+        <div className="absolute top-0 lg:left-20 z-0">
+          <Image
+            src={lineImage}
+            alt="line_image"
+            width={500}
+            className="opacity-5 xl:w-[1000px]"
+          ></Image>
         </div>
       </Container>
     </AnimatedBg>

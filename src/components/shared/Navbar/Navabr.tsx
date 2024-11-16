@@ -95,21 +95,25 @@ export default function Navbar() {
             <Navlink route="/" setHideMobileMenu={setHideMobileMenu}>
               Home
             </Navlink>
-            <Navlink route="/contact" setHideMobileMenu={setHideMobileMenu}>
-              Contact
-            </Navlink>
-            <Navlink route="/about" setHideMobileMenu={setHideMobileMenu}>
+
+            <Navlink route="/#about" setHideMobileMenu={setHideMobileMenu}>
               About Us
             </Navlink>
 
-            <Navlink route="/service" setHideMobileMenu={setHideMobileMenu}>
+            <Navlink route="/#service" setHideMobileMenu={setHideMobileMenu}>
               Services
             </Navlink>
-            <Navlink route="/whyChoiceUs" setHideMobileMenu={setHideMobileMenu}>
+            <Navlink
+              route="/#whyChoiceUs"
+              setHideMobileMenu={setHideMobileMenu}
+            >
               Why Choice Us
             </Navlink>
-            <Navlink route="/team" setHideMobileMenu={setHideMobileMenu}>
-              Team
+            <Navlink
+              route="/#whyChoiceUs"
+              setHideMobileMenu={setHideMobileMenu}
+            >
+              Portfolio
             </Navlink>
           </div>
 
@@ -188,14 +192,7 @@ export default function Navbar() {
                       Home
                     </Navlink>
                   </motion.li>
-                  <motion.li variants={smallMenuLinkVariants}>
-                    <Navlink
-                      route="/contact"
-                      setHideMobileMenu={setHideMobileMenu}
-                    >
-                      Contact
-                    </Navlink>
-                  </motion.li>
+
                   <motion.li variants={smallMenuLinkVariants}>
                     <Navlink
                       route="/about"
