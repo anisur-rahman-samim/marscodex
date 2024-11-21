@@ -28,7 +28,7 @@ export default function RootLayout({
         <header>
           <TopbarInfo></TopbarInfo>
           <nav className="sticky left-0 top-0 z-10 w-full">
-            <Navbar></Navbar>
+            <Navbar></Navbar>  
           </nav>
         </header>
         <div>{children}</div>
