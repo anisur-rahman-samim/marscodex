@@ -27,11 +27,13 @@ export default function RootLayout({
       <body className={`${barlow.className} antialiased`}>
         <header>
           <TopbarInfo></TopbarInfo>
-          <nav className="sticky left-0 top-0 z-10 w-full">
-            <Navbar></Navbar>  
-          </nav>
         </header>
-        <div>{children}</div>
+        <div>
+          <nav className="sticky left-0 top-0 z-30 w-full">
+            <Navbar></Navbar>
+          </nav>
+          {children}
+        </div>
       </body>
     </html>
   );
