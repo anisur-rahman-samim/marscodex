@@ -31,7 +31,7 @@ const InfiniteMovement = ({
           repeat: Infinity,
           repeatType: "reverse",
           duration: duration,
-          delay: 0.5,
+          delay: 0.3,
         },
       }}
       className={cn(className)}

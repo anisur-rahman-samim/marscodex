@@ -3,17 +3,25 @@ import Image from "next/image";
 import AnimatedBg from "../animation/AnimatedBg";
 import Container from "../shared/Container";
 import check from "@/assets/check.png";
+import aboutImage2 from "@/assets/about2.png";
+import aboutImage3 from "@/assets/about3.png";
 
 const AboutSection = () => {
   return (
     <AnimatedBg>
-      <Container className="flex justify-between items-center lg:gap-x-10 gap-x-5">
-        <div id="about" className="flex-1">
+      <Container className="pt-10 flex flex-col md:flex-row justify-between items-center lg:gap-x-10 gap-x-5  relative">
+        <div id="about" className="flex-1 overflow-x-hidden">
           <Image
             src={aboutImage}
             alt="about_image"
             className=" max-h-[500px] max-w-[500px]"
           ></Image>
+          <div className="absolute top-0 -translate-x-20">
+            <Image src={aboutImage2} alt="about_image"></Image>
+          </div>
+          <div className="absolute top-0  translate-x-56">
+            <Image src={aboutImage3} alt="about_image"></Image>
+          </div>
         </div>
         <div className="flex-1 space-y-5">
           <p className="text-2xl font=-semibold text-deep-blue">
