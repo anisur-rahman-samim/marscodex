@@ -9,7 +9,7 @@ import aboutImage3 from "@/assets/about3.png";
 const AboutSection = () => {
   return (
     <AnimatedBg>
-      <Container className="pt-10 flex flex-col md:flex-row justify-between items-center lg:gap-x-10 gap-x-5  relative">
+      <Container className="pt-10 flex flex-col lg:flex-row justify-between items-center lg:gap-x-10 gap-x-5  relative">
         <div id="about" className="flex-1 overflow-x-hidden">
           <Image
             src={aboutImage}
@@ -24,7 +24,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="flex-1 space-y-5">
-          <p className="text-2xl font=-semibold text-deep-blue">
+          <p className="text-2xl font=-semibold text-primary-blue">
             About Company
           </p>
           <h1 className="text-4xl font-bold">
@@ -45,13 +45,13 @@ const AboutSection = () => {
               </p>
             </div>
             <div className="flex items-center gap-x-2">
-              <Image src={check} alt="checkIcon" className="size-6"></Image>
+              <Image src={check} alt="checkIcon" className="size-7"></Image>
               <p className="text-lg font-semibold">
                 Website & Mobile application design & Development
               </p>
             </div>
             <div className="flex items-center gap-x-2">
-              <Image src={check} alt="checkIcon" className="size-6"></Image>
+              <Image src={check} alt="checkIcon" className="size-7"></Image>
               <p className="text-lg font-semibold">
                 Professional User Experince & Interface researching
               </p>
