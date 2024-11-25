@@ -11,7 +11,7 @@ const WhyChoiceUs = () => {
     <AnimatedBg>
       <Container className="pt-10 flex flex-col  lg:flex-row justify-between items-center lg:gap-x-10 gap-x-5  ">
         <div className="flex-1 space-y-5">
-          <p className="text-2xl font=-semibold text-primary-blue">
+          <p className="text-2xl  text-primary-blue">
             WHY CHOOSE US
           </p>
           <h1 className="lg:text-4xl text-xl font-bold">

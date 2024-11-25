@@ -12,7 +12,7 @@ import PlayButton from "@/components/client-components/PlayButton";
 const HeroSection = () => {
   return (
     <AnimatedBg>
-      <Container className="min-h-[calc(100vh-24px)] pt-5 flex-between lg:gap-x-10 relative">
+      <Container className="min-h-[calc(100vh-24px)] py-10 flex-between lg:gap-x-10 relative">
         <div className="flex-1 space-y-5 z-20">
           <h4 className="text-2xl font-semibold uppercase text-primary-blue">
             Solution For Your Business

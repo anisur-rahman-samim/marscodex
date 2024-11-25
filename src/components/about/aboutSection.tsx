@@ -9,7 +9,7 @@ import aboutImage3 from "@/assets/about3.png";
 const AboutSection = () => {
   return (
     <AnimatedBg>
-      <Container className="pt-10 flex flex-col lg:flex-row justify-between items-center lg:gap-x-10 gap-x-5  relative">
+      <Container className="py-10 flex flex-col lg:flex-row justify-between items-center lg:gap-x-10 gap-x-5  relative">
         <div id="about" className="flex-1 overflow-x-hidden">
           <Image
             src={aboutImage}
@@ -24,7 +24,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="flex-1 space-y-5">
-          <p className="text-2xl font=-semibold text-primary-blue">
+          <p className="text-2xl  text-primary-blue">
             About Company
           </p>
           <h1 className="text-4xl font-bold">
