@@ -5,6 +5,8 @@ import Container from "@/components/shared/Container";
 import AnimatedBg from "@/components/animation/AnimatedBg";
 import sectionImage2 from "@/assets/why_3_2.png";
 import sectionImage3 from "@/assets/why_3_3.png";
+import InfiniteMovement from "@/components/animation/InfiniteMovement";
+import AnimatedText from "@/components/animation/AnimatedText";
 
 const WhyChoiceUs = () => {
   return (
@@ -12,7 +14,9 @@ const WhyChoiceUs = () => {
       <Container className="pt-10 flex flex-col  lg:flex-row justify-between items-center lg:gap-x-10 gap-x-5  ">
         <div className="flex-1 space-y-5">
           <p className="text-2xl  text-primary-blue">
-            WHY CHOOSE US
+            <AnimatedText delay={0.05} duration={0.3}>
+              WHY CHOOSE US
+            </AnimatedText>
           </p>
           <h1 className="lg:text-4xl text-xl font-bold">
             You Get IT & Business Solution
@@ -30,7 +34,7 @@ const WhyChoiceUs = () => {
             </div>
             <div className="flex items-center gap-x-2">
               <Image src={check} alt="checkIcon" className="size-7"></Image>
-              <p className="text-lg font-semibold">High Quality Sicurity</p>
+              <p className="text-lg font-semibold">High Quality Performance</p>
             </div>
             <div className="flex items-center gap-x-2">
               <Image src={check} alt="checkIcon" className="size-7"></Image>
@@ -42,17 +46,24 @@ const WhyChoiceUs = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 relative">
-          <Image
-            src={sectionImage}
-            alt="section_image"
-            className=" max-h-[500px] max-w-[500px]"
-          ></Image>
-          <div className="absolute top-0 translate-x-16">
-            <Image src={sectionImage2} alt="section_image_2"></Image>
-          </div>
-          <div className="absolute top-0  translate-x-80">
-            <Image src={sectionImage3} alt="section_image_3"></Image>
+        <div className="flex-1 relative flex justify-end">
+          <div>
+            <Image
+              src={sectionImage}
+              alt="section_image"
+              // className=" max-h-[500px] max-w-[500px]"
+            ></Image>
+            <div className="absolute top-0 translate-x-4 md:translate-x-10">
+              <InfiniteMovement duration={5} y="20%">
+                {" "}
+                <Image src={sectionImage2} alt="section_image_2"></Image>
+              </InfiniteMovement>
+            </div>
+            <div className="absolute top-0 hidden md:block translate-x-80">
+              <InfiniteMovement duration={5} x="20%">
+                <Image src={sectionImage3} alt="section_image_3"></Image>
+              </InfiniteMovement>
+            </div>
           </div>
         </div>
       </Container>

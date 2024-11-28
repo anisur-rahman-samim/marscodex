@@ -5,29 +5,37 @@ import Container from "../shared/Container";
 import check from "@/assets/check.png";
 import aboutImage2 from "@/assets/about2.png";
 import aboutImage3 from "@/assets/about3.png";
+import InfiniteMovement from "../animation/InfiniteMovement";
+import AnimatedText from "../animation/AnimatedText";
 
 const AboutSection = () => {
   return (
     <AnimatedBg>
       <Container className="py-10 flex flex-col lg:flex-row justify-between items-center lg:gap-x-10 gap-x-5  relative">
-        <div id="about" className="flex-1 overflow-x-hidden">
+        <div id="about" className="flex-1 overflow-hidden">
           <Image
             src={aboutImage}
             alt="about_image"
-            className=" max-h-[500px] max-w-[500px]"
+            // className=" max-h-[500px] max-w-[500px]"
           ></Image>
-          <div className="absolute top-0 -translate-x-20">
-            <Image src={aboutImage2} alt="about_image"></Image>
+          <div className="absolute top-0 -translate-x-20 hidden md:block">
+            <InfiniteMovement duration={5} x="20%">
+              <Image src={aboutImage2} alt="about_image"></Image>
+            </InfiniteMovement>
           </div>
-          <div className="absolute top-0  translate-x-56">
-            <Image src={aboutImage3} alt="about_image"></Image>
+          <div className="absolute top-0 translate-x-24   md:translate-x-56">
+            <InfiniteMovement duration={5} y="20%">
+              <Image src={aboutImage3} alt="about_image"></Image>
+            </InfiniteMovement>
           </div>
         </div>
-        <div className="flex-1 space-y-5">
+        <div className="flex-1 md:space-y-5 space-y-2">
           <p className="text-2xl  text-primary-blue">
-            About Company
+            <AnimatedText delay={0.05} duration={0.3}>
+              About Company
+            </AnimatedText>
           </p>
-          <h1 className="text-4xl font-bold">
+          <h1 className="md:text-4xl  font-bold">
             We Elevate Our Clients with Innovative <br /> and Tailored IT
             Solutions.
           </h1>

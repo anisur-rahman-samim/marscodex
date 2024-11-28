@@ -120,7 +120,7 @@ export default function Navbar() {
           {/* contact button */}
           <div>
             <HoverEffectButton className="bg-primary-blue py-2 text-base font-medium truncate pt-1 px-6">
-              <Link href="#">Contact Us</Link>
+              <Link href="#">Appointment</Link>
             </HoverEffectButton>
           </div>
         </Container>

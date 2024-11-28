@@ -8,16 +8,19 @@ import PulseShadow from "@/components/ui/PulseShadow";
 import lineImage from "@/assets/hero-shape2.png";
 import MovementElement from "@/components/animation/MovementElement";
 import PlayButton from "@/components/client-components/PlayButton";
+import AnimatedText from "@/components/animation/AnimatedText";
 
 const HeroSection = () => {
   return (
     <AnimatedBg>
-      <Container className="min-h-[calc(100vh-24px)] py-10 flex-between lg:gap-x-10 relative">
-        <div className="flex-1 space-y-5 z-20">
-          <h4 className="text-2xl font-semibold uppercase text-primary-blue">
-            Solution For Your Business
+      <Container className="min-h-[calc(100vh-200px)] py-10 flex-between flex-col-reverse lg:flex-row lg:gap-x-10 relative">
+        <div className="flex-1 md:space-y-5 space-y-3 z-20">
+          <h4 className="md:text-2xl text-xl font-semibold uppercase text-primary-blue">
+            <AnimatedText delay={0.05} duration={0.3}>
+              Solution For Your Business
+            </AnimatedText>
           </h4>
-          <h1 className="text-3xl md:text-5xl font-bold text-deep-blue">
+          <h1 className="text-3xl  xl:text-5xl font-bold text-deep-blue">
             Providing Technology <br /> For Smart{" "}
             <span className="text-primary-blue font-semibold">IT Solution</span>
           </h1>
@@ -26,9 +29,9 @@ const HeroSection = () => {
             deliverables. Authoritatively integrate installed base
             web-readiness. Quickly maximize superior process.
           </p>
-          <div className="flex items-center lg:gap-x-8 gap-x-4">
+          <div className="flex items-center justify-center md:justify-start lg:gap-x-8 gap-x-4 gap-y-4 flex-wrap">
             <AnimatedButton>
-              <div className="flex gap-x-2 text-xl ">
+              <div className="flex gap-x-2 text-xl truncate ">
                 About Us{" "}
                 <ArrowRight
                   color="#fff"
@@ -39,7 +42,7 @@ const HeroSection = () => {
             <div className="flex items-center gap-x-3 cursor-pointer">
               <PlayButton></PlayButton>
               <div>
-                <h5 className="font-semibold">Discover Our Story</h5>
+                <h5 className="font-semibold truncate">Discover Our Story</h5>
                 <p className="text-primary-gray">Subscribe Now</p>
               </div>
             </div>

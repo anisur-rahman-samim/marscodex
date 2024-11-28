@@ -2,7 +2,6 @@
 import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { del } from "framer-motion/client";
 
 type TProsType = {
   children: ReactNode;
@@ -16,23 +15,19 @@ const InfiniteMovement = ({
   children,
   duration,
   className,
-  x,
-  y,
+  x = "10%",
+  y = "10%",
 }: TProsType) => {
   return (
     <motion.div
       initial={{ y: 0, x: 0 }}
       animate={{ y: y, x: x }}
       transition={{
-        y: {
-          type: "spring",
-          stiffness: 100,
-          damping: 20,
-          repeat: Infinity,
-          repeatType: "reverse",
-          duration: duration,
-          delay: 0.3,
-        },
+        type: "tween",
+        ease: "easeInOut",
+        repeat: Infinity,
+        repeatType: "reverse",
+        duration: duration,
       }}
       className={cn(className)}
     >
@@ -40,4 +35,5 @@ const InfiniteMovement = ({
     </motion.div>
   );
 };
+
 export default InfiniteMovement;

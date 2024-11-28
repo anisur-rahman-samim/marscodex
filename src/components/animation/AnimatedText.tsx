@@ -33,6 +33,7 @@ const AnimatedText = ({
             delay: index * delay,
             ease: "easeIn",
           }}
+          viewport={{ once: true }}
           className={cn("inline-block", className)}
         >
           {char === " " ? <span>&nbsp;</span> : char}
