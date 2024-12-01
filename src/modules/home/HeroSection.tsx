@@ -1,14 +1,15 @@
+"use client";
 import AnimatedBg from "@/components/animation/AnimatedBg";
 import Container from "@/components/shared/Container";
 import heroImage from "@/assets/hero/hero_img.png";
 import Image from "next/image";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import AnimatedButton from "@/components/ui/animatedButton";
-import PulseShadow from "@/components/ui/PulseShadow";
 import lineImage from "@/assets/hero-shape2.png";
 import MovementElement from "@/components/animation/MovementElement";
 import PlayButton from "@/components/client-components/PlayButton";
 import AnimatedText from "@/components/animation/AnimatedText";
+import Typewriter from "typewriter-effect";
 
 const HeroSection = () => {
   return (
@@ -20,9 +21,25 @@ const HeroSection = () => {
               Solution For Your Business
             </AnimatedText>
           </h4>
-          <h1 className="text-3xl  xl:text-5xl font-bold text-deep-blue">
-            Providing Technology <br /> For Smart{" "}
-            <span className="text-primary-blue font-semibold">IT Solution</span>
+          <h1 className="text-3xl  xl:text-5xl font-bold text-deep-blue ">
+            Providing Technology <br />{" "}
+            <span className="flex gap-2 flex-wrap">
+              For Smart{" "}
+              <span className="text-primary-blue font-semibold inline">
+                <Typewriter
+                  options={{
+                    autoStart: true,
+                    loop: true,
+                    delay: 60,
+                    strings: [
+                      "It Solution.",
+                      "Tech Innovations.",
+                      "Digital Solutions.",
+                    ],
+                  }}
+                ></Typewriter>
+              </span>
+            </span>
           </h1>
           <p className="text-primary-gray">
             Rapidiously streamline revolutionary networks with technically sound
