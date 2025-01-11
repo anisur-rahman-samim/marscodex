@@ -92,25 +92,25 @@ export default function Navbar() {
 
           {/* Links & Icons -- right */}
           <div className="flex flex-grow items-center justify-end text-center lg:gap-x-8 xl:gap-x-6 2xl:gap-x-8">
-            <Navlink route="/" setHideMobileMenu={setHideMobileMenu}>
+            <Navlink route="#hero" setHideMobileMenu={setHideMobileMenu}>
               Home
             </Navlink>
 
-            <Navlink route="/#about" setHideMobileMenu={setHideMobileMenu}>
+            <Navlink route="#about" setHideMobileMenu={setHideMobileMenu}>
               About Us
             </Navlink>
 
-            <Navlink route="/#service" setHideMobileMenu={setHideMobileMenu}>
+            <Navlink route="#service" setHideMobileMenu={setHideMobileMenu}>
               Services
             </Navlink>
             <Navlink
-              route="/#whyChoiceUs"
+              route="#whyChoiceUs"
               setHideMobileMenu={setHideMobileMenu}
             >
               Why Choice Us
             </Navlink>
             <Navlink
-              route="/#whyChoiceUs"
+              route="#portfolio"
               setHideMobileMenu={setHideMobileMenu}
             >
               Portfolio
