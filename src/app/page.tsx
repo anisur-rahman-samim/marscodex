@@ -1,4 +1,5 @@
 import AboutSection from "@/components/about/aboutSection";
+import Footer from "@/components/shared/Footer";
 import HeroSection from "@/modules/home/HeroSection";
 import Portfolio from "@/modules/portfolio/Portfolio";
 import Services from "@/modules/services/services";
@@ -12,6 +13,7 @@ export default function Home() {
       <Services></Services>
       <WhyChoiceUs></WhyChoiceUs>
       <Portfolio></Portfolio>
+      <Footer></Footer>
     </div>
   );
 }

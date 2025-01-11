@@ -10,7 +10,9 @@ export default function Navlink({
   setHideMobileMenu,
 }: {
   children: ReactNode;
+  // @typescript-eslint/no-explicit-any
   route: any;
+  // @typescript-eslint/no-explicit-any
   setHideMobileMenu: any;
 }) {
   const pathname = usePathname();
