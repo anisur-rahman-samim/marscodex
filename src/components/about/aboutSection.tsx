@@ -30,15 +30,17 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="flex-1 md:space-y-5 space-y-2">
-          <p className="text-2xl  text-primary-blue">
-            <AnimatedText delay={0.05} duration={0.3}>
-              About Company
-            </AnimatedText>
-          </p>
-          <h1 className="md:text-4xl  font-bold">
-            We Elevate Our Clients with Innovative <br /> and Tailored IT
-            Solutions.
-          </h1>
+          <div>
+            <p className="text-2xl  text-primary-blue">
+              <AnimatedText delay={0.05} duration={0.3}>
+                ABOUT COMPANY
+              </AnimatedText>
+            </p>
+            <h1 className="md:text-4xl  font-bold">
+              We Elevate Our Clients with Innovative <br /> and Tailored IT
+              Solutions.
+            </h1>
+          </div>
           <p className="text-black/80 text-lg">
             Continually harness backward-compatible initiatives and synergistic
             content. Objectively strategize cutting edge niches with

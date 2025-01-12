@@ -13,14 +13,16 @@ const WhyChoiceUs = () => {
     <AnimatedBg>
       <Container className="pt-10 flex flex-col  lg:flex-row justify-between items-center lg:gap-x-10 gap-x-5  ">
         <div className="flex-1 space-y-5">
-          <p className="text-2xl  text-primary-blue">
-            <AnimatedText delay={0.05} duration={0.3}>
-              WHY CHOOSE US
-            </AnimatedText>
-          </p>
-          <h1 className="lg:text-4xl text-xl font-bold">
-            You Get IT & Business Solution
-          </h1>
+          <div>
+            <p className="text-2xl  text-primary-blue">
+              <AnimatedText delay={0.05} duration={0.3}>
+                WHY CHOOSE US
+              </AnimatedText>
+            </p>
+            <h1 className="lg:text-4xl text-xl font-bold">
+              You Get IT & Business Solution
+            </h1>
+          </div>
           <p className="text-black/80 text-lg">
             Dynamically brand plug-and-play action items for extensive
             leadership. Dramatically seize prospective content through seamless
