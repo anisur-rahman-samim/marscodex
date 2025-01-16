@@ -47,13 +47,13 @@ const TopbarInfo = () => {
           <Link href={"https://www.facebook.com/marscodex"} target="_blank">
             <Facebook size={18} color="#fff" />
           </Link>
-          <Link href={"https://www.facebook.com/marscodex"} target="_blank">
+          <Link href={"#"} target="_blank">
             <Linkedin size={18} color="#fff" />
           </Link>
-          <Link href={"https://www.facebook.com/marscodex"} target="_blank">
+          <Link href={"#"} target="_blank">
             <Instagram size={18} color="#fff" />
           </Link>
-          <Link href={"https://www.facebook.com/marscodex"} target="_blank">
+          <Link href={"https://www.youtube.com/@Marscodex"} target="_blank">
             <Youtube size={20} color="#fff" />
           </Link>
         </div>

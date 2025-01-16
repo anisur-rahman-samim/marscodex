@@ -5,6 +5,15 @@ import Container from "./Container";
 import particle from "@/assets/particle_7.png";
 import borderImage from "@/assets/footerBorder.png";
 import { StepForward } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Youtube,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -20,11 +29,42 @@ const Footer = () => {
               height={1200}
               className=" w-[180px]"
             />
+
             <p className="mt-4 max-w-[320px] text-primary-white/70 mx-auto">
               Rapidiously streamline revolutionary networks with technically
               sound deliverables. Authoritatively integrate installed base
               web-readiness. Quickly maximize superior process.
             </p>
+            <div className="flex items-center gap-x-2  mt-4">
+              <Link
+                href={"https://www.facebook.com/marscodex"}
+                target="_blank"
+                className="border border-white rounded-full p-1"
+              >
+                <Facebook size={18} color="#fff" />
+              </Link>
+              <Link
+                href={"#"}
+                target="_blank"
+                className="border border-white rounded-full p-1"
+              >
+                <Linkedin size={18} color="#fff" />
+              </Link>
+              <Link
+                href={"#"}
+                target="_blank"
+                className="border border-white rounded-full p-1"
+              >
+                <Instagram size={18} color="#fff" />
+              </Link>
+              <Link
+                href={"https://www.youtube.com/@Marscodex"}
+                target="_blank"
+                className="border border-white rounded-full p-1"
+              >
+                <Youtube size={20} color="#fff" />
+              </Link>
+            </div>
           </div>
 
           {/* Links and supports informations */}
@@ -58,24 +98,30 @@ const Footer = () => {
               </div>
               <ul className="space-y-2 text-primary-white">
                 <li>
-                  <Link href="/privacy-policy">Privacy Policy </Link>
+                  <Link href="/about">About</Link>
                 </li>
                 <li>
-                  <Link href="/terms-condition">Term of Use</Link>
+                  <Link href="/service">Service</Link>
                 </li>
                 <li>
-                  <Link href="/contact-us">Contact Us</Link>
+                  <Link href="/whyChoiceUs">Why Choice Us</Link>
+                </li>
+                <li>
+                  <Link href="/portfolio">Portfolio</Link>
                 </li>
               </ul>
             </div>
 
             {/* Support Information */}
             <div>
-              <h3 className="mb-4 font-semibold text-primary-white">Support</h3>
+              <div className="mb-3">
+                <h3 className="font-semibold text-primary-white">Support</h3>
+                <Image src={borderImage} alt="border_image"></Image>
+              </div>
               <ul className="space-y-2 text-primary-white">
-                <li>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
-                <li>team@churchscroll.com</li>
-                <li>+88015-88888-9999</li>
+                <li>Road No. 6, Mirpur 10, 1216</li>
+                <li>support@marscodex.com</li>
+                <li>+8801332371530</li>
               </ul>
             </div>
           </div>
