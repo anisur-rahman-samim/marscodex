@@ -9,9 +9,6 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  Mail,
-  MapPin,
-  Phone,
   Youtube,
 } from "lucide-react";
 
@@ -22,20 +19,22 @@ const Footer = () => {
         <div className="flex flex-col flex-wrap xl:justify-between justify-center gap-y-10 gap-x-2 md:flex-row">
           {/* Logo and description */}
           <div>
-            <Image
-              src={logo}
-              alt="logo"
-              width={1200}
-              height={1200}
-              className=" w-[180px]"
-            />
+            <div className="flex justify-center lg:justify-start">
+              <Image
+                src={logo}
+                alt="logo"
+                width={1200}
+                height={1200}
+                className=" w-[180px]"
+              />
+            </div>
 
             <p className="mt-4 max-w-[320px] text-primary-white/70 mx-auto">
               Rapidiously streamline revolutionary networks with technically
               sound deliverables. Authoritatively integrate installed base
               web-readiness. Quickly maximize superior process.
             </p>
-            <div className="flex items-center gap-x-2  mt-4">
+            <div className="flex items-center justify-center lg:justify-start gap-x-2  mt-4">
               <Link
                 href={"https://www.facebook.com/marscodex"}
                 target="_blank"
@@ -98,16 +97,16 @@ const Footer = () => {
               </div>
               <ul className="space-y-2 text-primary-white">
                 <li>
-                  <Link href="/about">About</Link>
+                  <Link href="#about">About</Link>
                 </li>
                 <li>
-                  <Link href="/service">Service</Link>
+                  <Link href="#service">Service</Link>
                 </li>
                 <li>
-                  <Link href="/whyChoiceUs">Why Choice Us</Link>
+                  <Link href="#whyChoiceUs">Why Choice Us</Link>
                 </li>
                 <li>
-                  <Link href="/portfolio">Portfolio</Link>
+                  <Link href="#portfolio">Portfolio</Link>
                 </li>
               </ul>
             </div>
