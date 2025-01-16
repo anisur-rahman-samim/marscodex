@@ -11,8 +11,9 @@ import AnimatedText from "@/components/animation/AnimatedText";
 const WhyChoiceUs = () => {
   return (
     <AnimatedBg>
+      <div id="whyChoiceUs">
       <Container className="pt-10 flex flex-col  lg:flex-row justify-between items-center lg:gap-x-10 gap-x-5  ">
-        <div className="flex-1 space-y-5">
+        <div  className="flex-1 space-y-5">
           <div>
             <p className="text-2xl  text-primary-blue">
               <AnimatedText delay={0.05} duration={0.3}>
@@ -69,6 +70,7 @@ const WhyChoiceUs = () => {
           </div>
         </div>
       </Container>
+      </div>
     </AnimatedBg>
   );
 };
