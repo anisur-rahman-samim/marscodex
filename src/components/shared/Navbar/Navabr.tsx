@@ -103,16 +103,10 @@ export default function Navbar() {
             <Navlink route="#service" setHideMobileMenu={setHideMobileMenu}>
               Services
             </Navlink>
-            <Navlink
-              route="#whyChoiceUs"
-              setHideMobileMenu={setHideMobileMenu}
-            >
+            <Navlink route="#whyChoiceUs" setHideMobileMenu={setHideMobileMenu}>
               Why Choice Us
             </Navlink>
-            <Navlink
-              route="#portfolio"
-              setHideMobileMenu={setHideMobileMenu}
-            >
+            <Navlink route="#portfolio" setHideMobileMenu={setHideMobileMenu}>
               Portfolio
             </Navlink>
           </div>
@@ -186,7 +180,7 @@ export default function Navbar() {
                 >
                   <motion.li variants={smallMenuLinkVariants}>
                     <Navlink
-                      route="/home"
+                      route="#hero"
                       setHideMobileMenu={setHideMobileMenu}
                     >
                       Home
@@ -195,7 +189,7 @@ export default function Navbar() {
 
                   <motion.li variants={smallMenuLinkVariants}>
                     <Navlink
-                      route="/about"
+                      route="#about"
                       setHideMobileMenu={setHideMobileMenu}
                     >
                       About Us
@@ -204,10 +198,26 @@ export default function Navbar() {
 
                   <motion.li variants={smallMenuLinkVariants}>
                     <Navlink
-                      route="/all-products"
+                      route="#service"
                       setHideMobileMenu={setHideMobileMenu}
                     >
-                      Products
+                      Services
+                    </Navlink>
+                  </motion.li>
+                  <motion.li variants={smallMenuLinkVariants}>
+                    <Navlink
+                      route="#whyChoiceUs"
+                      setHideMobileMenu={setHideMobileMenu}
+                    >
+                      Why Choice Us
+                    </Navlink>
+                  </motion.li>
+                  <motion.li variants={smallMenuLinkVariants}>
+                    <Navlink
+                      route="#portfolio"
+                      setHideMobileMenu={setHideMobileMenu}
+                    >
+                      Portfolio
                     </Navlink>
                   </motion.li>
                 </motion.ul>
