@@ -162,7 +162,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu Links */}
+        {/* Mobile  Links  */}
         <div className="absolute left-0 top-[60px] z-[9999] h-auto w-full">
           <AnimatePresence>
             {!hideMobileMenu && (
