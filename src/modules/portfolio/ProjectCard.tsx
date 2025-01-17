@@ -1,9 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 type TProps = {
-  image: string;
-  description: string;
+  id: number;
+  type: string;
   name: string;
+  projectType: string;
+  image: string;
 };
 
 const ProjectCard = ({ data }: { data: TProps }) => {
@@ -21,7 +23,7 @@ const ProjectCard = ({ data }: { data: TProps }) => {
           <h1 className="xl:text-3xl text-xl text-center font-semibold">
             {data?.name}
           </h1>
-          <p>{data?.description}</p>
+          <p>{data?.projectType}</p>
         </div>
       </CardContent>
     </Card>

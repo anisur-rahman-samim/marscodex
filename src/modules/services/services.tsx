@@ -43,7 +43,7 @@ const Services = () => {
               className="w-full mt-8"
             >
               <CarouselContent>
-                {servicesData?.slice(0, 8)?.map((data) => (
+                {servicesData?.map((data) => (
                   <CarouselItem
                     key={data?.id}
                     className="md:basis-1/2 xl:basis-1/3 "

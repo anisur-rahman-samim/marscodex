@@ -2,12 +2,14 @@ import AnimatedBg from "@/components/animation/AnimatedBg";
 import AnimatedText from "@/components/animation/AnimatedText";
 import Container from "@/components/shared/Container";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import AppProjects from "./AppProjects";
+import AllProject from "./AllProject";
 
 const Portfolio = () => {
   return (
-    <div id="portfolio" >
+    <div id="portfolio">
       <AnimatedBg>
-        <Tabs defaultValue="account" >
+        <Tabs defaultValue="all">
           <Container className="py-10">
             <div className="flex flex-clo md:flex-row justify-center md:justify-between items-center">
               <div>
@@ -20,15 +22,35 @@ const Portfolio = () => {
                   Our Portfolio / Works
                 </h1>
               </div>
-              <TabsList className="grid w-full grid-cols-2 max-w-[300px]">
-              <TabsTrigger value="account">Account</TabsTrigger>
-              <TabsTrigger value="password">Password</TabsTrigger>
-            </TabsList>
+              <TabsList className="grid w-full grid-cols-3 max-w-[300px]">
+                <TabsTrigger
+                  value="all"
+                  className="data-[state=active]:bg-primary-blue data-[state=active]:text-white duration-300"
+                >
+                  All
+                </TabsTrigger>
+                <TabsTrigger
+                  value="app"
+                  className="data-[state=active]:bg-primary-blue data-[state=active]:text-white duration-300"
+                >
+                  App
+                </TabsTrigger>
+                <TabsTrigger
+                  value="website"
+                  className="data-[state=active]:bg-primary-blue data-[state=active]:text-white duration-300"
+                >
+                  Website
+                </TabsTrigger>
+              </TabsList>
             </div>
 
-           
-            <TabsContent value="account">All</TabsContent>
-            <TabsContent value="password">App</TabsContent>
+            <TabsContent value="all">
+              <AllProject></AllProject>
+            </TabsContent>
+            <TabsContent value="app">
+              <AppProjects></AppProjects>
+            </TabsContent>
+            <TabsContent value="website">Website</TabsContent>
           </Container>
         </Tabs>
       </AnimatedBg>

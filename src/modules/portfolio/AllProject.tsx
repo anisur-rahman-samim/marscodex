@@ -4,11 +4,10 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { servicesData } from "@/components/utils/services-data";
 import Autoplay from "embla-carousel-autoplay";
 import ProjectCard from "./ProjectCard";
 import { portfolioData } from "@/components/utils/portfolioData";
-const AppProjects = () => {
+const AllProject = () => {
   return (
     <div className="flex flex-col justify-center items-center ">
       <Carousel
@@ -40,4 +39,4 @@ const AppProjects = () => {
   );
 };
 
-export default AppProjects;
+export default AllProject;
