@@ -4,12 +4,11 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { servicesData } from "@/components/utils/services-data";
 import Autoplay from "embla-carousel-autoplay";
 import ProjectCard from "./ProjectCard";
 import { portfolioData } from "@/components/utils/portfolioData";
-const AppProjects = () => {
-  const appProject = portfolioData?.filter((project)=> project?.type === "app" )
+const WebsiteProjects = () => {
+    const websiteProject = portfolioData?.filter((project)=> project?.type === "website" )
   return (
     <div className="flex flex-col justify-center items-center ">
       <Carousel
@@ -28,7 +27,7 @@ const AppProjects = () => {
         className="w-full md:mt-8 mt-4"
       >
         <CarouselContent>
-          {portfolioData?.map((data) => (
+          {websiteProject?.map((data) => (
             <CarouselItem key={data?.id} className="md:basis-1/2 lg:basis-1/3 ">
               <div className="p-1">
                 <ProjectCard data={data}></ProjectCard>
@@ -41,4 +40,4 @@ const AppProjects = () => {
   );
 };
 
-export default AppProjects;
+export default WebsiteProjects;

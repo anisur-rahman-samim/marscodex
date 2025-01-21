@@ -4,6 +4,7 @@ import Container from "@/components/shared/Container";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AppProjects from "./AppProjects";
 import AllProject from "./AllProject";
+import WebsiteProjects from "./WebsiteProjects";
 
 const Portfolio = () => {
   return (
@@ -11,7 +12,7 @@ const Portfolio = () => {
       <AnimatedBg>
         <Tabs defaultValue="all">
           <Container className="py-10">
-            <div className="flex flex-clo md:flex-row justify-center md:justify-between items-center">
+            <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-y-2">
               <div>
                 <p className="text-2xl  text-primary-blue">
                   <AnimatedText delay={0.05} duration={0.3}>
@@ -50,7 +51,9 @@ const Portfolio = () => {
             <TabsContent value="app">
               <AppProjects></AppProjects>
             </TabsContent>
-            <TabsContent value="website">Website</TabsContent>
+            <TabsContent value="website">
+            <WebsiteProjects></WebsiteProjects>
+            </TabsContent>
           </Container>
         </Tabs>
       </AnimatedBg>

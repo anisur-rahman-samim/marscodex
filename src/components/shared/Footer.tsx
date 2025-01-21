@@ -5,12 +5,7 @@ import Container from "./Container";
 import particle from "@/assets/particle_7.png";
 import borderImage from "@/assets/footerBorder.png";
 import { StepForward } from "lucide-react";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
-} from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (

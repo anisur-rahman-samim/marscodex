@@ -23,11 +23,11 @@ const AllProject = () => {
             stopOnMouseEnter: true,
           }),
         ]}
-        className="w-full mt-8"
+        className="w-full md:mt-8 mt-4"
       >
         <CarouselContent>
           {portfolioData?.map((data) => (
-            <CarouselItem key={data?.id} className="md:basis-1/2 xl:basis-1/3 ">
+            <CarouselItem key={data?.id} className="md:basis-1/2 lg:basis-1/3 ">
               <div className="p-1">
                 <ProjectCard data={data}></ProjectCard>
               </div>
