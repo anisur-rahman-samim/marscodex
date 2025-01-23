@@ -53,10 +53,8 @@ export default function AppointmentContainer() {
   }
 
   return (
-    <Card className="w-full">
-      <CardHeader>
-        <h2 className="text-2xl font-semibold text-center">Schedule Now</h2>
-      </CardHeader>
+    <Card className="w-full py-5">
+     
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

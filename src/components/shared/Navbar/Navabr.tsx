@@ -123,15 +123,14 @@ export default function Navbar() {
       {/* ------------ Mobile Version -------------- */}
       <div
         className={cn(
-          "transition-all duration-300 ease-in-out lg:hidden",
+          "transition-all duration-300 ease-in-out lg:hidden ",
           squeezeOnScroll ? "px-2 py-3" : "px-0 py-5"
         )}
       >
         {/* Menu Header */}
-        <div className="relative flex items-center justify-between px-4">
+        <div className="relative flex items-center justify-between px-4 gap-x-4 ">
           {/* menu icon */}
           <button
-            className="w-1/3"
             onClick={() => setHideMobileMenu(!hideMobileMenu)}
           >
             {hideMobileMenu ? (
@@ -142,24 +141,17 @@ export default function Navbar() {
           </button>
 
           {/* center */}
-          <Link href="/" className="w-1/3">
+          <Link href="/" className="max-w-[150px]">
             <Image src={logo} alt="logo" className="mx-auto block" />
           </Link>
 
-          {/* right */}
-          <div className="flex w-1/3 items-center justify-end gap-x-4 text-lg font-bold">
-            <div>
-              {/* search bar */}
-              <AnimatePresence>
-                <motion.div
-                  className="search-bar-container absolute left-16 top-12 z-[9999] w-3/4"
-                  initial={{ y: 10, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: 10, opacity: 0 }}
-                ></motion.div>
-              </AnimatePresence>
-            </div>
-          </div>
+
+           {/* contact button */}
+        <div >
+          <HoverEffectButton className="bg-primary-blue md:py-2 py-1 text-base font-medium truncate pt-1 md:px-6 px-3 mt-2">
+            <Link href="/appointment">Appointment</Link>
+          </HoverEffectButton>
+        </div>
         </div>
 
         {/* Mobile  Links  */}
@@ -225,6 +217,8 @@ export default function Navbar() {
             )}
           </AnimatePresence>
         </div>
+
+       
       </div>
     </nav>
   );
