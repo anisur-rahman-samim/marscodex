@@ -92,21 +92,24 @@ export default function Navbar() {
 
           {/* Links & Icons -- right */}
           <div className="flex flex-grow items-center justify-end text-center lg:gap-x-8 xl:gap-x-6 2xl:gap-x-8">
-            <Navlink route="#hero" setHideMobileMenu={setHideMobileMenu}>
+            <Navlink route="/#hero" setHideMobileMenu={setHideMobileMenu}>
               Home
             </Navlink>
 
-            <Navlink route="#about" setHideMobileMenu={setHideMobileMenu}>
+            <Navlink route="/#about" setHideMobileMenu={setHideMobileMenu}>
               About Us
             </Navlink>
 
-            <Navlink route="#service" setHideMobileMenu={setHideMobileMenu}>
+            <Navlink route="/#service" setHideMobileMenu={setHideMobileMenu}>
               Services
             </Navlink>
-            <Navlink route="#whyChoiceUs" setHideMobileMenu={setHideMobileMenu}>
+            <Navlink
+              route="/#whyChoiceUs"
+              setHideMobileMenu={setHideMobileMenu}
+            >
               Why Choice Us
             </Navlink>
-            <Navlink route="#portfolio" setHideMobileMenu={setHideMobileMenu}>
+            <Navlink route="/#portfolio" setHideMobileMenu={setHideMobileMenu}>
               Portfolio
             </Navlink>
           </div>
@@ -130,9 +133,7 @@ export default function Navbar() {
         {/* Menu Header */}
         <div className="relative flex items-center justify-between px-4 gap-x-4 ">
           {/* menu icon */}
-          <button
-            onClick={() => setHideMobileMenu(!hideMobileMenu)}
-          >
+          <button onClick={() => setHideMobileMenu(!hideMobileMenu)}>
             {hideMobileMenu ? (
               <Menu color="#FE6201" size={24} />
             ) : (
@@ -145,13 +146,12 @@ export default function Navbar() {
             <Image src={logo} alt="logo" className="mx-auto block" />
           </Link>
 
-
-           {/* contact button */}
-        <div >
-          <HoverEffectButton className="bg-primary-blue md:py-2 py-1 text-base font-medium truncate pt-1 md:px-6 px-3 mt-2">
-            <Link href="/appointment">Appointment</Link>
-          </HoverEffectButton>
-        </div>
+          {/* contact button */}
+          <div>
+            <HoverEffectButton className="bg-primary-blue md:py-2 py-1 text-base font-medium truncate pt-1 md:px-6 px-3 mt-2">
+              <Link href="/appointment">Appointment</Link>
+            </HoverEffectButton>
+          </div>
         </div>
 
         {/* Mobile  Links  */}
@@ -172,7 +172,7 @@ export default function Navbar() {
                 >
                   <motion.li variants={smallMenuLinkVariants}>
                     <Navlink
-                      route="#hero"
+                      route="/#hero"
                       setHideMobileMenu={setHideMobileMenu}
                     >
                       Home
@@ -181,7 +181,7 @@ export default function Navbar() {
 
                   <motion.li variants={smallMenuLinkVariants}>
                     <Navlink
-                      route="#about"
+                      route="/#about"
                       setHideMobileMenu={setHideMobileMenu}
                     >
                       About Us
@@ -190,7 +190,7 @@ export default function Navbar() {
 
                   <motion.li variants={smallMenuLinkVariants}>
                     <Navlink
-                      route="#service"
+                      route="/#service"
                       setHideMobileMenu={setHideMobileMenu}
                     >
                       Services
@@ -198,7 +198,7 @@ export default function Navbar() {
                   </motion.li>
                   <motion.li variants={smallMenuLinkVariants}>
                     <Navlink
-                      route="#whyChoiceUs"
+                      route="/#whyChoiceUs"
                       setHideMobileMenu={setHideMobileMenu}
                     >
                       Why Choice Us
@@ -206,7 +206,7 @@ export default function Navbar() {
                   </motion.li>
                   <motion.li variants={smallMenuLinkVariants}>
                     <Navlink
-                      route="#portfolio"
+                      route="/#portfolio"
                       setHideMobileMenu={setHideMobileMenu}
                     >
                       Portfolio
@@ -217,8 +217,6 @@ export default function Navbar() {
             )}
           </AnimatePresence>
         </div>
-
-       
       </div>
     </nav>
   );

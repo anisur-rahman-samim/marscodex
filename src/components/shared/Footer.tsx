@@ -83,7 +83,7 @@ const Footer = () => {
             </div>
 
             {/* Quick Links */}
-            <div>
+            {/* <div>
               <div className="mb-3">
                 <h3 className="font-semibold text-primary-white">
                   Quick Links
@@ -104,7 +104,7 @@ const Footer = () => {
                   <Link href="#portfolio">Portfolio</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Support Information */}
             <div>

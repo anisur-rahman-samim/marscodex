@@ -3,6 +3,7 @@ import { Barlow } from "next/font/google";
 import "./globals.css";
 import TopbarInfo from "@/modules/home/TopbarInfo";
 import Navbar from "@/components/shared/Navbar/Navabr";
+import { Toaster } from "sonner";
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
           </nav>
           {children}
         </div>
+        <Toaster position="top-center" />
       </body>
     </html>
   );

@@ -14,26 +14,19 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Please enter your name",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
-  subject: z.string().min(5, {
-    message: "Subject must be at least 5 characters.",
-  }),
-  description: z.string().min(10, {
-    message: "Description must be at least 10 characters.",
-  }),
+  name: z.string().min(2, { message: "Please enter your name" }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  subject: z
+    .string()
+    .min(5, { message: "Subject must be at least 5 characters." }),
+  description: z
+    .string()
+    .min(10, { message: "Description must be at least 10 characters." }),
 });
 
 export default function AppointmentContainer() {
@@ -48,13 +41,35 @@ export default function AppointmentContainer() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    // Handle form submission here (e.g., send data to an API)
+    const templateParams = {
+      from_name: values.name,
+      email: values.email,
+      subject: values.subject,
+      message: values.description,
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+      )
+      .then(
+        (response) => {
+          toast.success(
+            "We find your information. We will contract with you very soon."
+          );
+          form.reset();
+        },
+        (error) => {
+          console.error("Failed to send email.", error);
+        }
+      );
   }
 
   return (
     <Card className="w-full py-5">
-     
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
