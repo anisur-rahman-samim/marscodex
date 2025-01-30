@@ -142,7 +142,7 @@ export default function AppointmentContainer() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full bg-[#624CDF]">
               Book Appointment
             </Button>
           </form>
