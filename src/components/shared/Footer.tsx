@@ -113,9 +113,9 @@ const Footer = () => {
                 <Image src={borderImage} alt="border_image"></Image>
               </div>
               <ul className="space-y-2 text-primary-white">
-                <li>Road No. 6, Mirpur 10, 1216</li>
-                <li>support@marscodex.com</li>
-                <li>+8801332371530</li>
+                <li>Road No. 3, Block C, Banasree, Bangladesh</li>
+                <li><a href="mailto:marscodexit@gmail.com">marscodexit@gmail.com</a></li>
+                <li><a href="tel:+8801700992610">(+880)1700-992610</a></li>
               </ul>
             </div>
           </div>

@@ -9,6 +9,7 @@ import {
   Youtube,
 } from "lucide-react";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 
 const TopbarInfo = () => {
   return (
@@ -24,21 +25,21 @@ const TopbarInfo = () => {
           <div className="flex items-center gap-x-1">
             <Phone color="#684DF4" fill="#FFFDFC" size={20} />
             <Link
-              href={"tel: (+880)1332371530"}
+              href={"tel:+8801700992610"}
               className="text-primary-white hover:text-primary-light-blue text-sm"
             >
               {" "}
-              +8801332371530
+              (+880) 1700-992610
             </Link>
           </div>
           <div className="flex items-center gap-x-1 text-sm">
             <Mail color="#684DF4" fill="#FFFDFC" size={20} />
             <Link
-              href={"mailto:support@marscodex.com"}
+              href={"mailto:marscodexit@gmail.com"}
               className="text-primary-white hover:text-primary-light-blue"
             >
               {" "}
-              support@marscodex.com
+          marscodexit@gmail.com
             </Link>
           </div>
         </div>
@@ -47,11 +48,12 @@ const TopbarInfo = () => {
           <Link href={"https://www.facebook.com/marscodex"} target="_blank">
             <Facebook size={18} color="#fff" />
           </Link>
-          <Link href={"#"} target="_blank">
+          <Link href={"https://www.linkedin.com/company/marscodex"} target="_blank">
             <Linkedin size={18} color="#fff" />
           </Link>
-          <Link href={"#"} target="_blank">
-            <Instagram size={18} color="#fff" />
+          <Link title="+8801700992610" href={"https://wa.me/+8801700992610"} target="_blank">
+          <FaWhatsapp size={18} color="#fff"  />
+            {/* <Instagram /> */}
           </Link>
           <Link href={"https://www.youtube.com/@Marscodex"} target="_blank">
             <Youtube size={20} color="#fff" />
