@@ -10,6 +10,7 @@ import MovementElement from "@/components/animation/MovementElement";
 import PlayButton from "@/components/client-components/PlayButton";
 import AnimatedText from "@/components/animation/AnimatedText";
 import Typewriter from "typewriter-effect";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -47,20 +48,22 @@ const HeroSection = () => {
             web-readiness. Quickly maximize superior process.
           </p>
           <div className="flex items-center justify-center md:justify-start lg:gap-x-8 gap-x-4 gap-y-4 flex-wrap">
+            <Link href="https://calendar.app.google/W1zbVKxaSPvtVZbi7" target="_blank" rel="noopener noreferrer"> 
             <AnimatedButton>
               <div className="flex gap-x-2 text-xl truncate ">
-                About Us{" "}
+                Let's Talk{" "}
                 <ArrowRight
                   color="#fff"
                   className="group-hover:translate-x-12 duration-1000"
                 ></ArrowRight>
               </div>
             </AnimatedButton>
+             </Link>
             <div className="flex items-center gap-x-3 cursor-pointer">
               <PlayButton></PlayButton>
               <div>
-                <h5 className="font-semibold truncate">Discover Our Story</h5>
-                <p className="text-primary-gray">Subscribe Now</p>
+                <h5 className="font-semibold truncate">Live Project Preview</h5>
+                {/* <p className="text-primary-gray">Subscribe Now</p> */}
               </div>
             </div>
           </div>

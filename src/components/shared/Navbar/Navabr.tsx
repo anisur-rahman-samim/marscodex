@@ -149,7 +149,7 @@ export default function Navbar() {
           {/* contact button */}
           <div>
             <HoverEffectButton className="bg-primary-blue md:py-2 py-1 text-base font-medium truncate pt-1 md:px-6 px-3 mt-2">
-              <Link href="/appointment">Appointment</Link>
+             <Link href="https://calendar.app.google/W1zbVKxaSPvtVZbi7" target="_blank" rel="noopener noreferrer">Appointment</Link>
             </HoverEffectButton>
           </div>
         </div>
